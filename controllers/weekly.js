@@ -1,6 +1,9 @@
 import request from "request";
 
 export const getWeekly = (req, res) => {
+  req.header(
+    "Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept"
+  );
   const bHTMLSPLIT = [];
 
   request("https://heroesofthestorm.com/en-us/", (error, response, body) => {
